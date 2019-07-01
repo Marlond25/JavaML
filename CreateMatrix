@@ -1,0 +1,25 @@
+package invertir_martriz_nxn;
+import javax.swing.*;
+	public class Mi_matriz {
+		public static int n;
+		public static double[][] a;
+			public Mi_matriz(int s){
+				 n=s;	
+				 a=new double[n][n];
+			}
+			public void llenar_matriz(){
+				for (int p=0;p<n;p++){
+					for (int h=0;h<n;h++){
+						a[h][p]=Double.parseDouble(JOptionPane.showInputDialog("Valor " + p +","+ h + " ?"));
+					}
+			    }   
+			}
+			public void mostrar_matriz(){
+				for (int i=0;i<n;i++){
+					System.out.println(" ");
+			    	for (int j=0;j<n;j++){
+			    		System.out.print( "  " + a[j][i] + " ");
+			    	}
+			    }
+			}
+	}
