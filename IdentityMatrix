@@ -1,0 +1,28 @@
+package invertir_martriz_nxn;
+	public class Matriz_identidad {
+		private int b;
+		public static double[][] id;
+		public Matriz_identidad(){
+			b=Mi_matriz.n;
+			id=new double[b][b];
+		}
+		public void llena_id(){
+			for (int p=0;p<b;p++){
+				for (int h=0;h<b;h++){
+					if (h==p){
+						id[h][p]=1;
+					}else {
+						id[h][p]=0;
+					}
+				}
+		    }   
+		}
+		public void mostrar_id(){
+			for (int i=0;i<b;i++){
+				System.out.println(" ");
+		    	for (int j=0;j<b;j++){
+		    		System.out.print("  " + id[j][i] + " ");
+		    	}
+		    }
+		}
+	}
