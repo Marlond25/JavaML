@@ -1,0 +1,30 @@
+package invertir_martriz_nxn;
+	public class Matriz_adjunta {
+		int d;
+		int e;
+		public static double[][] adj;
+			public Matriz_adjunta(){
+				d=2*Mi_matriz.n;
+				e=Mi_matriz.n;
+				adj=new double[d][e];
+			}
+			public void llena_adj(){
+				for (int p=0;p<e;p++){
+					for (int h=0;h<d;h++){
+						if (h<(d/2)){
+							adj[h][p]=Mi_matriz.a[h][p];
+						}else {
+							adj[h][p]=Matriz_identidad.id[(h-e)][p];
+						}
+					}
+			    } 
+			}
+			public void mostrar_adj(){
+				for (int i=0;i<e;i++){
+					System.out.println(" ");
+			    	for (int j=0;j<d;j++){
+			    		System.out.print("  " + adj[j][i] + " ");
+			    	}
+			    }
+			}
+	}
