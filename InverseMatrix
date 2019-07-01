@@ -1,0 +1,31 @@
+	package invertir_martriz_nxn;
+	import javax.swing.JOptionPane;
+	public class Invierte_matriz {
+	public static void main(String[] args) {
+		        JOptionPane.showInputDialog(" El siguiente programa calcula la matriz inversa a una matriz cuadrada nxn."
+				+" \n A continuacion se le pedira la dimension de n y en seguida debera ingresar los valores de "
+				+"\n las posiciones indicadas, preste especial atencion a estos pues un error de entrada se convertira "
+				+"\n en un error de salida, las matrices se muestran en la consola del editor eclipe." +"\n                       Presione enter para continuar");
+			Mi_matriz primerintento= new Mi_matriz(Integer.parseInt(JOptionPane.showInputDialog("Dimension n de la matriz?")));
+			primerintento.llenar_matriz();
+			System.out.println(" ");
+			System.out.println(" Matriz ingresada: ");
+			primerintento.mostrar_matriz();
+		    Matriz_identidad segundo=new Matriz_identidad();
+		    segundo.llena_id();
+		    System.out.println();
+		    System.out.println(" \n Matriz identidad: ");
+		    segundo.mostrar_id();
+		    Matriz_adjunta tercero=new Matriz_adjunta();
+		    tercero.llena_adj();
+		    System.out.println();
+		    System.out.println(" \n Matriz adjunta: ");
+		    tercero.mostrar_adj();
+		    Matriz_escalonada cuarto=new Matriz_escalonada();
+		    cuarto.escala();
+		    System.out.println();
+		    System.out.println(" \n Matriz escalonada: ");
+		    cuarto.mostrar_esc();
+	}
+
+}
